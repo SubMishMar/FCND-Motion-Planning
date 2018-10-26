@@ -23,7 +23,8 @@
 These scripts contain a basic planning implementation that includes...
 
 And here's a demostration of my results (ok this image has nothing to do with it, but it's a nice example of how to include images in your writeup!)
-[linkname](https://youtu.be/nLBZ6U3HlFw)
+
+[![IMAGE ALT TEXT HERE](https://www.youtube.com/watch?v=nLBZ6U3HlFw/0.jpg)](https://www.youtube.com/watch?v=nLBZ6U3HlFw)
 
 Here's | A | Snappy | Table
 --- | --- | --- | ---
