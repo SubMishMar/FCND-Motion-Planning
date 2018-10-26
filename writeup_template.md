@@ -57,7 +57,7 @@ And here's a demostration of my results:
 
 Besides this, I added a new a_star() implementation here which uses the voronoi approach. Because the grid based A* algorithm is very slow. The implementation that can be found in planning_utils.py, the link is: https://github.com/SubMishMar/FCND-Motion-Planning/blob/f0efb8aa5de7372633af35b9177601e5e5aeb570/planning_utils.py#L217-L266
 #### 6. Cull waypoints 
-For this step you can use a collinearity test or ray tracing method like Bresenham. The idea is simply to prune your path of unnecessary waypoints. Explain the code you used to accomplish this step.
+Used a basic collinearity check: https://github.com/SubMishMar/FCND-Motion-Planning/blob/f0efb8aa5de7372633af35b9177601e5e5aeb570/planning_utils.py#L283-L297
 
 
 
