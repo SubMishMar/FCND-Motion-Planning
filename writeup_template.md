@@ -29,24 +29,25 @@ And here's a demostration of my results:
 ### Implementing Your Path Planning Algorithm
 
 #### 1. Set your global home position
+        f = open("colliders.csv")
+        line = f.readline()
+        f.close()
+        lat_lon = re.findall(r"[-+]?\d*\.\d+|\d+", line)
+        lat0 = float(lat_lon[1])
+        lon0 = float(lat_lon[3])
         self.set_home_position(lon0, lat0, 0)
-
-
-And here is a lovely picture of our downtown San Francisco environment from above!
-![Map of SF](./misc/map.png)
-
+        
 #### 2. Set your current local position
-Here as long as you successfully determine your local position relative to global home you'll be all set. Explain briefly how you accomplished this in your code.
-
-
-Meanwhile, here's a picture of me flying through the trees!
-![Forest Flying](./misc/in_the_trees.png)
+        local_position = global_to_local(self.global_position, self.global_home)
 
 #### 3. Set grid start position from local position
-This is another step in adding flexibility to the start location. As long as it works you're good to go!
+        grid_start = (int(local_position[0]-north_offset), int(local_position[1]-east_offset))
 
 #### 4. Set grid goal position from geodetic coords
-This step is to add flexibility to the desired goal location. Should be able to choose any (lat, lon) within the map and have it rendered to a goal location on the grid.
+        goal_local_pos = global_to_local([-122.39628088, 37.79698094, self.global_home[2]], self.global_home)
+        goal_x = int(np.ceil(goal_local_pos[0]) - north_offset)
+        goal_y = int(np.ceil(goal_local_pos[1]) - east_offset) 		 
+        grid_goal = (goal_x, goal_y)
 
 #### 5. Modify A* to include diagonal motion (or replace A* altogether)
 Minimal requirement here is to modify the code in planning_utils() to update the A* implementation to include diagonal motions on the grid that have a cost of sqrt(2), but more creative solutions are welcome. Explain the code you used to accomplish this step.
