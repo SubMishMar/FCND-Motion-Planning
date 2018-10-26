@@ -26,17 +26,10 @@ And here's a demostration of my results:
 [![Check this video](http://img.youtube.com/vi/v=nLBZ6U3HlFw/0.jpg)](https://www.youtube.com/watch?v=nLBZ6U3HlFw)
 
 
-Here's | A | Snappy | Table
---- | --- | --- | ---
-1 | `highlight` | **bold** | 7.41
-2 | a | b | c
-3 | *italic* | text | 403
-4 | 2 | 3 | abcd
-
 ### Implementing Your Path Planning Algorithm
 
 #### 1. Set your global home position
-Here students should read the first line of the csv file, extract lat0 and lon0 as floating point values and use the self.set_home_position() method to set global home. Explain briefly how you accomplished this in your code.
+https://github.com/SubMishMar/FCND-Motion-Planning/blob/d120877ce33be6f14ec2b2f42c993fe3b7a56f5f/motion_planning.py#L135
 
 
 And here is a lovely picture of our downtown San Francisco environment from above!
