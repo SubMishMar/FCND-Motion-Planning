@@ -50,8 +50,12 @@ And here's a demostration of my results:
         grid_goal = (goal_x, goal_y)
 
 #### 5. Modify A* to include diagonal motion (or replace A* altogether)
-Minimal requirement here is to modify the code in planning_utils() to update the A* implementation to include diagonal motions on the grid that have a cost of sqrt(2), but more creative solutions are welcome. Explain the code you used to accomplish this step.
-
+Modified the a_star() function in planning_utils.py to include diagonal motion. Just had to add the following lines:
+    NE = (-1, 1, np.sqrt(2))
+    SE = (1, 1, np.sqrt(2))
+    SW = (1, -1, np.sqrt(2))
+    NW = (-1, -1, np.sqrt(2))
+    
 #### 6. Cull waypoints 
 For this step you can use a collinearity test or ray tracing method like Bresenham. The idea is simply to prune your path of unnecessary waypoints. Explain the code you used to accomplish this step.
 
