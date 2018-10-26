@@ -29,7 +29,7 @@ And here's a demostration of my results:
 ### Implementing Your Path Planning Algorithm
 
 #### 1. Set your global home position
-https://github.com/SubMishMar/FCND-Motion-Planning/blob/d120877ce33be6f14ec2b2f42c993fe3b7a56f5f/motion_planning.py#L135
+        self.set_home_position(lon0, lat0, 0)
 
 
 And here is a lovely picture of our downtown San Francisco environment from above!
