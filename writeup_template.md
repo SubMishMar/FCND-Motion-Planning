@@ -55,11 +55,11 @@ And here's a demostration of my results:
         SW = (1, -1, np.sqrt(2))
         NW = (-1, -1, np.sqrt(2))
 
-Besides this, I added a new a_star() implementation here which uses the voronoi approach. Because the grid based A* algorithm is very slow.
+Besides this, I added a new a_star() implementation here which uses the voronoi approach. Because the grid based A* algorithm is very slow. Below is the implementation that can be found in planning_utils.py
+
+
 
 def a_star2(graph, h, start, goal):
-
-
     path = []
     path_cost = 0
     queue = PriorityQueue()
